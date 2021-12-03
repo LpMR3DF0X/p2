@@ -1,0 +1,18 @@
+hr {
+    margin: 2rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.25;
+  }
+
+#back {
+  background-color: #e9e9e9;
+}
+
+#imgpos {
+	position:absolute; 
+	left: 550px; /* posiciona a 90px para a esquerda */ 
+	top: 70px; /* posiciona a 70px para baixo */
+	}
+

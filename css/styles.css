@@ -1,0 +1,12 @@
+hr {
+    margin: 2rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.25;
+  }
+
+#back {
+  background-color: #e9e9e9;
+}
+

@@ -50,8 +50,8 @@ function desenharPizza(){
 
     var opcoes = {
       'title':'Pais',
-      'height': 150,
-      'width': 250,
+      'height': 250,
+      'width': 450,
       'pieHole': 0.4,
      
   
@@ -78,12 +78,13 @@ function desenharPizza2(){
 
   var opcoes2 = {
     'title':'Pais',
-    'height': 150,
-    'width': 250,
+    'height': 250,
+    'width': 450,
     'pieHole': 0.4,
     'backgroundColor': '#e9e9e9' 
    
 
+    
 
 };
 
@@ -91,7 +92,11 @@ function desenharPizza2(){
   grafico2.draw(tabela2, opcoes2);
 }
 
-google.charts.setOnLoadCallback(desenharPizza2);
+
+
+
+
+
 
 
 

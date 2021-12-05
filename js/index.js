@@ -50,7 +50,7 @@ function desenharPizza(){
 
     var opcoes = {
       'title':'Pais',
-      'height': 350,
+      'height': 250,
       'width': 450,
       'pieHole': 0.4,
      
@@ -78,12 +78,12 @@ function desenharPizza2(){
 
   var opcoes2 = {
     'title':'Pais',
-    'height': 350,
+    'height': 250,
     'width': 450,
     'pieHole': 0.4,
-    'backgroundColor': '#e9e9e9' 
    
 
+    
 
 };
 
@@ -91,6 +91,23 @@ function desenharPizza2(){
   grafico2.draw(tabela2, opcoes2);
 }
 
-google.charts.setOnLoadCallback(desenharPizza2);
+google.charts.load('current', {'packages':['table']});
+google.charts.setOnLoadCallback(drawTable);
 
 
+function drawTable() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Name');
+  data.addColumn('number', 'Salary');
+  data.addColumn('boolean', 'Full Time Employee');
+  data.addRows([
+    ['Mike',  {v: 10000, f: '$10,000'}, true],
+    ['Jim',   {v:8000,   f: '$8,000'},  false],
+    ['Alice', {v: 12500, f: '$12,500'}, true],
+    ['Bob',   {v: 7000,  f: '$7,000'},  true]
+  ]);
+
+  var table = new google.visualization.Table(document.getElementById('table_div'));
+
+  table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+}
